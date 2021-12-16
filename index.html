@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="searchWord" placeholder="Nhập từ cần dịch">
+<button onclick="translate1()">Translate</button>
+<br><br>
+<p id="result"></p>
+
+<script>
+    function translate1() {
+        let word = document.getElementById('searchWord').value
+        let english = ['Apple', 'Banana', 'Orange']
+        let vietnamese = ['Táo', 'Chuối', 'Cam']
+        for (let i = 0; i < english.length; i++) {
+            if (word == english[i]) {
+                document.getElementById('result').innerHTML = vietnamese[i]
+            }
+        }
+    }
+</script>
+</body>
+</html>
